@@ -3,6 +3,7 @@ import { withRouter } from "react-router-dom";
 import { API_URL, API_KEY, IMAGE_BASE_URL } from "../../../Config";
 import MainImage from "../commons/MainImage";
 import MovieInfo from "./Section/MovieInfo";
+import Favorite from "./Section/Favorite";
 import GridCards from "../commons/GridCards";
 import { Row } from "antd";
 
@@ -26,7 +27,6 @@ function MovieDetail(props) {
     fetch(endpointCrew)
       .then((response) => response.json())
       .then((response) => {
-        console.log("response for crew", response);
         setCasts(response.cast);
       });
   }, []);
@@ -46,6 +46,7 @@ function MovieDetail(props) {
 
       {/* Body */}
       <div style={{ width: "85%", margin: "1rem auto" }}>
+        <Favorite movie={Movie} movieId={movieId} userForm={localStorage.getItem("userId")} />
         {/* Movie Info */}
         <MovieInfo movie={Movie} />
         <br />
