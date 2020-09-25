@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const favoriteSchema = mongoose.Schema(
   {
-    userForm: {
+    userFrom: {
       //user.js에 있는 User 정보를 가져올 수 있는 기능
       type: Schema.Types.ObjectId,
       ref: "User",
