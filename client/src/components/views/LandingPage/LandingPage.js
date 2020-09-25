@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { API_URL, API_KEY, IMAGE_BASE_URL } from "../../../Config";
 import { withRouter } from "react-router-dom";
-import MainImage from "./Section/MainImage";
-import GridCards from "../../commons/GridCards";
+import MainImage from "../commons/MainImage";
+import GridCards from "../commons/GridCards";
 import { Row } from "antd";
 
 function LandingPage() {
